@@ -17,6 +17,7 @@
 
 
             StartWork(employees, arr, x => x % 2 == 0);
+            StartWork(employees, arr, x => x % 2 == 0);
         }
 
         #region method 1
@@ -48,7 +49,7 @@
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine("\nFinished.");
+            Console.WriteLine("\nFinished.\n");
         }
         #endregion
     }

@@ -13,7 +13,7 @@ namespace hometask_12
         internal string Name { get; set; }
         internal string Surname { get; set; }
         internal double Salary { get; set; }
-        internal long WorkDuration { get; set; }
+        internal double WorkDuration { get; set; }
         internal double PricePerSecond { get; set; }
 
         public Employee(string name, string surname ,double pricePerSecond)
@@ -25,9 +25,9 @@ namespace hometask_12
             PricePerSecond = pricePerSecond;
         }
 
-        internal double GetDailyPrice(int second)
+        internal double GetDailyPrice(double milliSecond)
         {
-            Salary = second * PricePerSecond;
+            Salary += milliSecond * PricePerSecond;
             return Salary;
         }
     }

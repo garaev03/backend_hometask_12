@@ -15,16 +15,16 @@ namespace hometask_12
             List<int> list = new List<int>();
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            Thread.Sleep(1000);
+
             foreach (var item in arr)
             { 
                 if (func(item))
                     list.Add(item);
             }
             stopwatch.Stop();
-            emp.WorkDuration=stopwatch.ElapsedMilliseconds;       
+            emp.WorkDuration+=stopwatch.Elapsed.TotalMilliseconds;       
 
-            return emp.GetDailyPrice(Convert.ToInt32(emp.WorkDuration)%1000);
+            return emp.GetDailyPrice(emp.WorkDuration);
         }
     }
 }
