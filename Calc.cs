@@ -9,7 +9,6 @@ namespace hometask_12
 {
     internal class Calc
     {
-        internal static int[] arr = { 1, 5, 423, 27, 123, 320, 12, 125, 923, 50, 102 };
 
         internal static async Task<double> CalcEmployeeSalary(Employee emp, int[] arr, Func<int,bool> func)
         {
